@@ -1,0 +1,7 @@
+Jogo da memória desenvolvido com HTML, CSS e Java Script, baseado na ideia original de Marina Ferreira(https://marina-ferreira.github.io/tutorials/js/memory-game.pt-br/).
+Este projeto inclui várias modificações, como;
+# Efeitos sonoros para uma experiência mais imersiva
+# Imagens de fundo para um visual mais atraente
+# Tela de início para apresentar o jogo
+# Tela de carregamento para preparar o jogo
+# Placar para acompanhar o progresso 
