@@ -1,0 +1,170 @@
+body{
+    background-image: url(jogo-da-memoria.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 40px;
+    font-family: bold;
+    border: 3px solid #000;
+    padding: 20px;
+    border-radius: 100px;
+    animation: borda 3s infinite;
+    color:rebeccapurple;
+}
+
+@keyframes borda {
+    0%{
+       border-color: #000;
+       box-shadow:0 0 10px rgba(0, 0, 0.5);
+       color: #ff0;
+    }
+    25%{
+       border-color: #f00;
+       box-shadow:0 0 20px rgba(255, 0, 0, 0.5);
+       color:#00f;
+    }
+    50%{
+       border-color: #0f0;
+       box-shadow:0 0 30px rgba(0, 255, 0, 0.5);
+       color: #f00;
+    }
+    75%{
+       border-color: #00f;
+       box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+       color: #0f0;
+    }
+    100%{
+       border-color: #ff0;
+       box-shadow: 0 0 10px rgb(255, 255, 0);
+    }
+ }
+
+ #iniciar{
+ margin: 0 auto;
+ display: block;
+ margin-top: 100px;
+ font-size: large;
+ padding: 10px;
+ border-radius: 10px 20px;
+ cursor: pointer;
+ background-color: #ccc;
+ }
+
+#iniciar:hover{
+    background-color: #004c7f;
+}
+
+#load-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(jogo-da-memoria.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50px;
+    height: 70px;
+    background: #1c7ccc;
+    display: inline-block;
+    border: 3px solid #000;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+#game{
+    display: none;
+}
+
+.memoria{
+    width: 650px;
+    height: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    perspective: 1000px;
+ }
+
+ .carta {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+ }
+
+ .carta:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+ }
+
+ .carta.flip{
+    transform: rotateY(180deg);
+ }
+
+ .front-face,
+ .back-face{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border: 3px solid #000;
+    border-radius: 10px;
+    background: #1c7ccc;
+    backface-visibility: hidden;
+ }
+
+ .front-face{
+    transform: rotateY(180deg);
+ }
+
+ #placar{
+   display: none;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   font-size: 24px;
+}
+
+#regras{
+   position: absolute;
+   top: 50px;
+   left: 10px;
+   font-size: 18px;
+}
+
+#reiniciar{
+   position: absolute;
+   bottom: 10px;
+   left: 10px;
+   font-size: 24px;
+   padding: 10px;
+   border: none;
+   border-radius: 10px;
+   background-color: #4ca;
+   color: #fff;
+   cursor: pointer;
+   display: none;
+ }
+
+ #reiniciar:hover{
+   background-color: #3e8e41;
+ }

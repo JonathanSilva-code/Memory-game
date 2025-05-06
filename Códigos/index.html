@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Jogo da Memória </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="conteudo">
+        <h1>Jogo da Memória</h1>
+        <button id="iniciar">Iniciar</button>
+    </div>
+
+    <div id="load-screen" style="display: none;">
+        <div class="cards">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        </div>
+        <p>Embaralhando...</p>
+        <audio id="som-carregamento" src="shuffleandcardflip.mp3" autoplay></audio>
+    </div>
+    <div id="placar">
+        <p>Acertos:<span id="acertos">0</span></p>
+        <p>Erros:<span id="erros">0</span></p>
+    </div>
+    <div id="regras">
+        <h2>Regras do jogo</h2>
+        <p>O objetivo do jogo é encontrar todos os pares de cartas iguais.</p>
+        <p>Clique em uma carta para virá-la e encontrar seu par.</p>
+    </div>
+    <button id="reiniciar">Reiniciar</button>
+
+
+    <div id="game">
+        <selection class="memoria">
+            <div class="carta" data-framework="angular" >
+                <img class="front-face" src="angular.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="angular">
+                <img class="front-face" src="angular.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="aurelia">
+                <img class="front-face" src="aurelia.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="aurelia">
+                <img class="front-face" src="aurelia.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="backbone">
+                <img class="front-face" src="backbone.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="backbone">
+                <img class="front-face" src="backbone.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="ember">
+                <img class="front-face" src="ember.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="ember">
+                <img class="front-face" src="ember.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="react">
+                <img class="front-face" src="react.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="react">
+                <img class="front-face" src="react.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="vue">
+                <img class="front-face" src="vue.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+    
+            <div class="carta" data-framework="vue">
+                <img class="front-face" src="vue.svg" alt="Face da Carta">
+                <img class="back-face" src="js-badge.svg" alt="Verso da Carta">
+            </div>
+        </selection>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
